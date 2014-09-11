@@ -20,7 +20,7 @@ $mono-dark: #454545;
 
 .curriculum{
   position: relative;
-  font-size: 16px;
+  // font-size: 16px;
 
   img{
     width: 100%;
@@ -28,19 +28,11 @@ $mono-dark: #454545;
   }
 
   h3{
-    font-size: 400%;
-    line-height: 1.25em;
-    margin-bottom: .5em;
-    text-shadow: 0 1px rgba(0,0,0,.1);
+
   }
 
   h4{
-    font-size: 250%;
-    line-height: 1.35em;
-    margin-bottom: .5em;
-    text-shadow: 0 1px rgba(0,0,0,.1);
-    color: $mono-dark;
-    border-bottom: solid 1px $mono-light;
+
   }
 
   pre, table{
