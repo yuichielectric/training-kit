@@ -57,9 +57,7 @@ end
 
 # Clear out old content
 out_with_the_old('_modules')
-# out_with_the_old('_modulesjp')
 out_with_the_old('_courses')
-# out_with_the_old('_coursesjp')
 
 # Clone curriculum-github repository from Certify org
 puts "Cloning curriculum-github repository from Certify organization..."
