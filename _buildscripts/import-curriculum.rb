@@ -8,7 +8,9 @@ rescue LoadError
 end
 
 FileUtils.mkdir('_modules') unless File.directory?('_modules')
+FileUtils.mkdir('_modulesjp') unless File.directory?('_modulesjp')
 FileUtils.mkdir('_courses') unless File.directory?('_courses')
+FileUtils.mkdir('_coursesjp') unless File.directory?('_coursesjp')
 FileUtils.mkdir('images') unless File.directory?('images')
 
 def out_with_the_old(directory)
@@ -57,15 +59,20 @@ end
 
 # Clear out old content
 out_with_the_old('_modules')
+# out_with_the_old('_modulesjp')
 out_with_the_old('_courses')
+# out_with_the_old('_coursesjp')
 
 # Clone curriculum-github repository from Certify org
 puts "Cloning curriculum-github repository from Certify organization..."
-repo = Git.clone('https://github.com/certify/curriculum-github', 'curriculum-github')
+# repo = Git.clone('https://github.com/certify/curriculum-github', 'curriculum-github')
+repo = Git.clone('https://github.com/ikeike443/curriculum-github', 'curriculum-github') //TODO: should be confiurable
 
 # Import the fresh content from the repository
 in_with_the_new('modules')
+# in_with_the_new('modulesjp')
 in_with_the_new('courses')
+# in_with_the_new('coursesjp')
 in_with_the_new('images')
 
 # Remove local curriculum-github repository
