@@ -66,7 +66,7 @@ out_with_the_old('_courses')
 # Clone curriculum-github repository from Certify org
 puts "Cloning curriculum-github repository from Certify organization..."
 # repo = Git.clone('https://github.com/certify/curriculum-github', 'curriculum-github')
-repo = Git.clone('https://github.com/ikeike443/curriculum-github', 'curriculum-github') //TODO: should be confiurable
+repo = Git.clone('https://github.com/ikeike443/curriculum-github', 'curriculum-github') #TODO: should be confiurable
 
 # Import the fresh content from the repository
 in_with_the_new('modules')
