@@ -8,9 +8,7 @@ rescue LoadError
 end
 
 FileUtils.mkdir('_modules') unless File.directory?('_modules')
-FileUtils.mkdir('_modulesjp') unless File.directory?('_modulesjp')
 FileUtils.mkdir('_courses') unless File.directory?('_courses')
-FileUtils.mkdir('_coursesjp') unless File.directory?('_coursesjp')
 FileUtils.mkdir('images') unless File.directory?('images')
 
 def out_with_the_old(directory)
@@ -70,9 +68,7 @@ repo = Git.clone('https://github.com/ikeike443/curriculum-github', 'curriculum-g
 
 # Import the fresh content from the repository
 in_with_the_new('modules')
-# in_with_the_new('modulesjp')
 in_with_the_new('courses')
-# in_with_the_new('coursesjp')
 in_with_the_new('images')
 
 # Remove local curriculum-github repository
