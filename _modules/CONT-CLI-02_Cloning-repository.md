@@ -1,7 +1,7 @@
 ---
 layout: module
 leadingpath: ../
-title: Cloning a Repository
+title: リポジトリをクローンしよう
 pre-requisites: CONT-CLI-01_Basic-configuration
 learning-objective: Create a branch to separate feature work from the master branch.
 screens:

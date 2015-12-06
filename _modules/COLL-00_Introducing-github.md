@@ -1,9 +1,9 @@
 ---
 layout: module
 leadingpath: ../
-title: Introducing GitHub
+title: GitHubの紹介
 pre-requisites:
-learning-objective: Describe the features of GitHub and how it is used to collaborate effectively with your team.
+learning-objective: GitHubの機能と、コラボレーションをいかに活性化するかについて紹介します
 screens:
   - poll:
       title: Version Control Poll
@@ -24,20 +24,20 @@ screens:
               id: COLL-00-pq1-o3
               response: Welcome to the world of version control! It takes a bit of getting used to but you'll soon find out just how powerful a version control system can be for keeping track of your changed and collaborating with your team.
   - image-slide:
-      title: What is GitHub?
+      title: GitHubってなに?
       image: github-icon.jpg
       presenter-script:
-        - GitHub is a collaboration platform built on top of a distributed version control system called Git.
+        - GitHubはGitという分散バージョン管理システムの上に構築されたコラボレーションプラットフォームです
   - image-slide:
-      title: Key GitHub Features
+      title: GitHubの主な機能
       image: collaboration-features.jpg
       presenter-script:
-        - In addition to being a place to host and share your Git projects, GitHub provides a number of features to help your team collaborate including issues for discussing features and bugs and pull requests for discussing and reviewing new features your team is working on.
+        - Gitリポジトリをホストしてシェアするだけでなく、GitHubはコラボレーションを活性化する様々な機能を備えています。機能追加やバグ修正について議論したければIssuesが、いまチームが開発している新機能について議論するのにPull Requestが、と言った具合にです。
   - image-slide:
-      title: The GitHub Ecosystem
+      title: GitHubのエコシステム
       image: github-ecosystem.jpg
       presenter-script:
-        - You can also use all of your favorite tools with GitHub. Indispensable tools like continuous integration and continuous deployment help you and your team build software better, together.
+        - 好きなツールをGitHubに統合して使えます。一緒に継続的インテグレーションや継続的デプロイのためのツールを使えば、さらにチーム開発は効率的になります。
 additional-labs:
 additional-questions:
 resources:

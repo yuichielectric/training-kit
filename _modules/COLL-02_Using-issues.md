@@ -1,19 +1,19 @@
 ---
 layout: module
 leadingpath: ../
-title: Using Issues
+title: Issuesを使ってみよう
 pre-requisites: COLL-01_Exploring-a-repository
-learning-objective: Collaborate using GitHub Issues to discuss ideas, enhancements, tasks and bugs.
+learning-objective: GitHub Issuesを使ってアイディアや機能拡張についての議論、タスクやバグについて議論してみましょう
 screens:
   - image-slide:
-      title: Using Issues
+      title: Issuesを使ってみよう
       image: issues-icon.jpg
       presenter-script:
-        - "Use GitHub issues to record and discuss ideas, enhancements, tasks, and bugs. They make collaboration easier in a variety of ways, by:"
-        - Replacing email for project discussions, ensuring everyone on the team has the complete story.
-        - Allowing you to cross-link to other issues and pull requests.
-        - Creating a single, comprehensive record of how and why you made certain decisions.
-        - Allowing you to easily pull the right people into a conversation.
+        - "GitHub issuesを使うことで様々な観点でコラボレーションが円滑になります。例えば:"
+        - Eメールで議論する代わりに使えます。これによって、誰もが簡単に文脈を共有して議論に参加できます。
+        - Pull RequestとIssuesの間で相互にリンクを貼ることができます。
+        - どうしてそういう結論に至ったかについての記録が残ります。
+        - 議論に関連する人を巻き込むことが簡単になります。
   - video-slide:
       title: Using Issues
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
@@ -41,26 +41,26 @@ screens:
         - do: "Click `Issues > Filters`"
           say: Filters allow you to easily search for Issues by creator, labels, assignees and more. We will continue to explore these features throughout the course. For now, let's practice creating an issue!
   - lab:
-      title: Creating an issue
+      title: issueを作ってみよう
       id: COLL-02-lab-01
       presenter-script:
-        - Let's practice creating issues now!
+        - さあ、issueを作ってみましょう！
       steps:
-        - description: "Create an Issue to add your bio to the repo. The issue should contain each of the following: your name, a request to add your bio, some markdown formatting, and an @mention for the instructor."
+        - description: "issueを作って、あなたの自己紹介をリポジトリに追加してください。issueには次の情報を含めてください: 氏名, 自己紹介追加のお願い, いくつかmarkdown書式をテストで, そして最後にインストラクターを@メンションで通知してください。"
           id: COLL-02-create-issue
           verifications:
             - verification-type: issue-created
               id: COLL-02-create-issue-verification
               success-message: "Great job - you created an issue."
               failure-message: "It looks like you didn't create an issue. Want to try again?"
-        - description: Assign the issue you just created to yourself # optional for Monday
+        - description: 作ったissueを自分にアサインしてください。 # optional for Monday
           id: COLL-02-assign-issue
           verifications:
             - verification-type: issue-assigned-to-self
               id: COLL-02-assign-issue-verification
               success-message: "Great job - you assigned the issue to yourself."
               failure-message: "It looks like you didn't assign the issue to yourself."
-        - description: Apply the label of "Bio" to the issue # optional for Monday
+        - description: 自己紹介というラベルをissueに追加してください # optional for Monday
           id: COLL-02-label-issue
           verifications:
             - verification-type: issue-labeled
