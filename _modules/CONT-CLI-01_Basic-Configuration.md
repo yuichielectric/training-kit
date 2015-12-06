@@ -1,57 +1,57 @@
 ---
 layout: module
 leadingpath: ../
-title: Basic Command Line Interface (CLI) Configuration
+title: Command Line Interface (CLI) コンフィグの基礎
 pre-requisites: CONT-05_Merging-pull-requests
-learning-objective: Configure the CLI to work effectively with Git.
+learning-objective: Gitを効率的に使うためにCLIのコンフィグをしましょう
 screens:
   - image-slide:
-      title: Git Configuration Levels
+      title: Gitのコンフィグレベル
       image: config-levels.jpg
       presenter-script:
-        - If you prefer to work on the command line, you can easily integrate GitHub into your current workflow. The first thing you should do when you get started using git is to set your configuration options.
-        - Git allows you to set configuration options at three different levels.
-        - --system - These are system-wide configurations. They apply to all users on this computer.
-        - --global - These are the user level configurations. They only apply to your user account.
-        - --local - These are the repository level configurations. They only apply to the specific repository where they are set.
-        - The default value for git config is --local.
-        - We will revisit our configuration setting throughout the class; right now we are only setting the essentials to get us started.
+        - Gitをコマンドラインで使う場合、最初にすべきなのはコンフィグです。
+        - Gitには3つのコンフィグレベルがあります。
+        - --system - システムワイドな設定です。コンピュータ上の全ユーザーに適用されます。
+        - --global - ユーザー毎の設定です。自分のアカウントのみに適用されます。
+        - --local - リポジトリ毎の設定です。 これは設定したリポジトリにのみ適用されます。
+        - デフォルトは--localです。
+        - あとでまた設定できます; いまは基本的な設定だけを行います。
   - image-slide:
-      title: Checking Git Version
+      title: Gitのバージョンチェック
       image: git-version.jpg
       presenter-script:
-        - "Git is OS agnostic; the commands are essentially the same whether you are on Mac, Windows or Linux. You can use your favorite application to interact with the command line. Follow along with the commands in this video to make sure your computer is configured correctly."
-        - "First, let's check the version of Git currently installed on your system. At the very least you should have a version greater than 1.9.5 installed."
+        - "Gitはクロスプラットフォームです; コマンド体系はMac, Windows, Linux問わず基本的に同じです。Gitが正しくインストール、設定されているか確認しましょう"
+        - "まずバージョンを確認しましょう。1.9.5以上であれば問題ありません。"
   - image-slide:
-      title: Pre-viewing Configuration Settings
+      title: コンフィグのプレビュー
       image: config-list.jpg
       presenter-script:
-        - "If you would like to see which config settings have been added automatically, you can type `git config --list`. This will automatically read from each of the storage containers for config settings and list them."
+        - "コンフィグに自動追加された設定を見たいのであれば、`git config --list`と打ってみましょう。設定内容が一覧できます。"
   - image-slide:
-      title: Configuring User Name and Email
+      title:  User NameとEmailの設定
       image: config-username-email.jpg
       presenter-script:
-        - "Go ahead and follow along as we set up our basic configurations. Git uses the config settings for your user name and email address to generate a unique fingerprint for each of the commits you create, so let's set our user name and email address first. Type `git config --global user.name \"<user name>\"` and Type `git config --global user.email \"<user email>\"`"
+        - User NameとEmailを設定しましょう。Gitはこのふたつを使ってあなたが作った各コミットにfingerprintをつけていきます。`git config --global user.name "user name"` と打ち、 `git config --global user.email "user email"`と打ってください。
   - image-slide:
-      title: Configuring Default Editor
+      title: デフォルトのエディタを設定する
       image: config-editor.jpg
       presenter-script:
-        - "Next, we will add a default text editor. This is the text editor git will use when you need to edit things like commit messages or handle merge conflicts. Typing `git config --global core.editor \"atom --wait\"` will tell Git to use the open source atom text editor. If you would like to use a different editor you can look for instructions at https://help.github.com/articles/associating-text-editors-with-git/"
+        - 次にデフォルトのエディタを設定しましょう。コミットメッセージや衝突のマージ作業をするときなどに使われます。`git config --global core.editor \"atom --wait\"` と打つとGitはエディタとしてAtomを使うようになります。他のエディタが使いたい場合、次のリンク先を参考にしてください。 https://help.github.com/articles/associating-text-editors-with-git/
   - image-slide:
-      title: Configuring Autocrlf
+      title: Autocrlfの設定（改行コード）
       image: config-autocrlf.jpg
       presenter-script:
-        - "`autocrlf` stands for auto carriage return line feed. Different systems handle line endings and line breaks differently. If you open a file created on another system and do not have this config option set, git will think you made changes to the file based on the way your system handles this type of file. Type `git config --global core.autocrlf` If you are on a Windows machine, you will want to set this option to `true`. If you are on a Mac or Linux machine, you will set it to `input`."
+        - "`autocrlf` というのは自動CRLFということです。システムによって改行コードの扱いは違います。もしこの設定のない状態で、他の改行コードの扱いが違うシステムで作られたファイルを開くとGitは、あなたのシステムが自動で変更した改行コードについて、差分だと認識してしまいます。 `git config --global core.autocrlf`と打ちましょう。もしあなたが使っているのがWindowsであれば`true`と設定してください。もしLinuxかMacであれば`input`です。"
   - image-slide:
-      title: Configuring Default Push Behavior
+      title: デフォルトのPushの挙動を設定
       image: config-push-default.jpg
       presenter-script:
-        - "One final configuration option we will want to set is our default value for push. When you push changes from your local computer to the remote you can choose whether you want git to automatically push all of the local branches to their matching branches on the remote or whether you only want the currently checked out branch to be pushed. The config setting we use to set this option is push.default. We can set the default to `matching` if we want to push all branches automatically. OR, we can set it to `simple` if we only want to push the branch we are on. For now, let's use `git config --global push.default simple`."
+        - "最後に紹介する設定はPushのデフォルト設定です。ローカルマシンの変更をリモートサーバにPushするとき、ローカルにある全てのブランチを送るようにするか、いまチェックアウトしているブランチだけを送るかを選択できます。これを設定するにはpush.defaultという設定を使います。もしすべてのブランチを自動的に送信したい場合は`matching`に設定できます。 または、作業中のブランチだけにしたい場合は`simple`とすることもできます。今は、`git config --global push.default simple`としておきましょう。"
   - image-slide:
-      title: Viewing Configuration Settings
+      title: 設定を確認
       image: config-list.jpg
       presenter-script:
-        - "Now that we have set some of our own configuration options, let's take another look at `git config --list`. You may notice duplicate settings if the same variable is set in multiple locations. The lowest value on the list takes precedence."
+        - "様々な設定を施しました。設定がどうなったか見てみましょう。`git config --list`と打ってください。もし同じ設定を複数回していた場合、重複していることに気づくと思います。もし重複していた場合は、下にある設定値が優先されます。"
 additional-labs:
 additional-questions:
 resources:

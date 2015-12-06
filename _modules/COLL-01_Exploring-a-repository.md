@@ -1,17 +1,17 @@
 ---
 layout: module
 leadingpath: ../
-title: Exploring a Repository
+title: リポジトリ概要
 pre-requisites:
-learning-objective: Locate the key features of a GitHub repository.
+learning-objective: GitHubのリポジトリの持つ主要な機能を紹介します
 screens:
   - image-slide:
-      title: GitHub Repositories
+      title: GitHubリポジトリ
       image: repository-intro.jpg
       presenter-script:
-        - A repository is the most basic element of GitHub. It is easiest to imagine as a project's folder. However, unlike an ordinary folder on your laptop, a GitHub repository offers simple yet powerful tools for collaborating with others. A repository contains all of the project files (including documentation), and stores each file's revision history. Whether you are just curious or you are a major contributor, knowing your way around a repository is essential!
+        - リポジトリはGitHubの最も基本的な要素です。プロジェクトのフォルダみたいなイメージで考えるのが最も簡単でしょう。しかし、みなさんのPC上にあるフォルダと違いGitHubのリポジトリにはコラボレーションのためのシンプルかつパワフルな機能があります。リポジトリはプロジェクトに関するあらゆるファイルを格納することができます。ドキュメントも含めて。そして各ファイルの変更履歴も格納しています。プロジェクトのメンバーであっても、単に興味があってみたいだけの人でも、ファイルの履歴を確認することができます。
   - video-slide:
-      title: Exploring a repository
+      title: リポジトリ概要
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: Navigate to the first sample repository
