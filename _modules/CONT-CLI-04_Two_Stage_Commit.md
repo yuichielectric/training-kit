@@ -1,67 +1,67 @@
 ---
 layout: module
 leadingpath: ../
-title: The Two Stage Commit
+title: 2ステージコミット
 pre-requisites: CONT-CLI-03_Editing-local-files
-learning-objective: Add and commit files on the command line.
+learning-objective: コマンドライン上でAddとCommitする方法を学びます
 screens:
   - image-slide:
-      title: The Two Stage Commit
+      title: 2ステージコミット
       image: two-stage-commit-a.jpg
       presenter-script:
-        - After you have finished making your changes, it is time to commit them. When working from the command line, you will need to be familiar with the idea of the two stage commit.
+        - コードの変更が終わったら、コミットしましょう。コマンドラインで作業する際には、2ステージコミットという概念に慣れる必要があります。
   - image-slide:
-      title: The Two Stage Commit
+      title: 2ステージコミット
       image: two-stage-commit-b.jpg
       presenter-script:
-        - When you work locally, your files exist in one of four states: untracked, modified, staged, or committed.
-        - An untracked file is one that is not currently part of the version controlled directory.
+        - "ローカルで作業する間、ファイルは次の4つの状態のうちのどれかになります: untracked, modified, staged, または committed です。"
+        - untracked というのはまだバージョン管理の対象になっていない状態です。
   - image-slide:
-      title: The Two Stage Commit
+      title: 2ステージコミット
       image: two-stage-commit-c.jpg
       presenter-script:
-        - To add these files to version control, you will create a collection of files that represent a discrete unit of work. We build this unit in the staging area.
+        - これファのファイルをバージョン管理の対象にAddするには、ファイルを個別の目的単位でくくってやる必要があります。これをステージングエリアと言います。
   - image-slide:
-      title: The Two Stage Commit
+      title: 2ステージコミット
       image: two-stage-commit-d.jpg
       presenter-script:
-        - When we are satisfied with the unit of work we have assembled, we will commit everything in the staging area.
+        - ステージングエリアにくくった単位でOKであれば、それらステージングエリアにあるものすべてをCommit(コミット)します。
   - image-slide:
-      title: The Two Stage Commit
+      title: 2ステージコミット
       image: two-stage-commit-e.jpg
       presenter-script:
-        - In order to make a file part of the version controlled directory we will first do a git add and then we will do a git commit. Let's do it now.
+        - ファイルをバージョン管理の対象にするには、まず git add してそれから git commit する必要があります。やってみましょう。
   - video-slide:
       title: The Two Stage Commit
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: Type `git status`
-          say: Remember that Git status allows us to see the status of the files on our branch at any given time.
+          say: git statusすれば今いるブランチ上のファイルの状態をいつでも確認できます。
         - do: View status output
-          say: When you have saved the changes to your file, you will see that your file is listed under the heading Changes not staged for commit and the file says it has been modified.
+          say: ファイルの変更を保存したあとに見ると、変更がChanges not staged for commitのところに並んでいるはずです。そしてファイルはmodifiedと表示されているでしょう。
         - do: Type `git add <file-name.md>`
-          say: The first command we will use is git add and the name of the file.
+          say: 最初に実行するコマンドは git add ファイル名 です。
         - do: Type `git status`
-          say: Now, type git status again to see what has changed.
+          say: git status してみて、何が変わったか確認してみましょう。
         - do: View status output
-          say: Notice that your file is listed under the heading Changes to be commited. This tells us that the file is in the staging area.
+          say: ファイルがChanges to be committedに並んでいると思います。ファイルがステージングエリアに移ったということです。
         - do: Type `git commit`
-          say: Next you will type git commit. This tells git to collect all of the files in the staging area and commit them to version control as a single unit of work. Git will open your default text editor where you can enter the commit message.
+          say: 次に git commit してみましょう。これによってGitはステージングエリアにあるものを全て1つにまとめてバージョン管理システムにコミットします。コマンド実行後、Gitはデフォルトエディタを開いてコミットメッセージを入力するよう促します。
         - do: Type the commit message
-          say: "Simply type the commit message in the text editor. Any line without a # will be included in the commit message."
+          say: "エディタにメッセージを入力してください。#がついていない行はすべてコミットメッセージになります。"
         - do: Click `Save > Quit`
-          say: When you are happy with your commit message, simply save it and close your text editor.
+          say: コミットメッセージを入力し終わったら、保存してエディタを閉じてください。
         - do: Show git output message for commit
-          say: Git provides a visual confirmation when the commit is complete.
+          say: コミットが終わるとGitはその内容をビジュアルに見せてくれます。
   - lab:
-      title: Committing Your Changes
+      title: 変更をコミットしよう
       id: CONT-CLI-04-lab-01
       presenter-script:
-        - Let's use the two-stage commit to stage and commit our changes.
+        - 2ステージコミットを使って変更をAddしてComimtしてみましょう
       steps:
-        - description: Add your file to staging.
+        - description: ファイルをステージングエリアにAddする
           id: CONT-CLI-04-add
-        - description: Commit your changes.
+        - description: 変更をコミットする
           id: CONT-CLI-04-commit
 additional-labs:
 additional-questions:
