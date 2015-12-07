@@ -1,48 +1,48 @@
 ---
 layout: module
 leadingpath: ../
-title: Fixing Bad Commits
+title: 間違えたコミットを修正する
 pre-requisites: CONT-CLI-16_Reverting-commits
-learning-objective: Discover steps you can take when you realize you messed up the last commit.
+learning-objective: 直前のコミットで失敗してしまった時に採れる方法を探しましょう
 screens:
   - lab:
-      title: Making Commits
+      title: コミットを作りましょう
       id: CONT-CLI-17-lab-01
       presenter-script:
-        - Next we will learn how to change a commit. Complete these steps to prepare your files for this exercise.
+        - この後、コミットを変更する方法を学びます。練習の準備として、次の手順を実行してください。
       steps:
-        - description: Create a file called `onefile.md`. Do not commit the file.
+        - description: "`onefile.md`という名前のファイルを作成してください。コミットはまだです。"
           id: CONT-CLI-17-01-onefile
-        - description: Create a file called `twofile.md`. Do not commit the file.
+        - description: "`twofile.md`という名前のファイルを作成してください。コミットはまだです。"
           id: CONT-CLI-17-01-twofile
   - video-slide:
-      title: Fixing Bad Commits
+      title: 間違えたコミットを修正しよう
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Type `git add onefile.md`"
-          say: "Let's add onefile.md to staging."
+          say: "onefile.mdをステージングします"
         - do: "Type `git commit -m\"my mispelled commit msg\"`"
-          say: "Next let's type a commit message - but I'm going to make a mistake so I can fix it."
+          say: "次にコミットメッセージを入力します。後で修正するためにここでは間違ったスペルで入力します。"
         - do: "Type `git status`"
-          say: "So I have committed onefile.md, but I actually meant to commit twofile.md at the same time. We can fix this using a command called commit --amend."
+          say: "onefile.mdをコミットしました。でも本当はtwofile.mdも同時にコミットに含めたかったのです。こういう時、commit --amendというコマンドが使えます。"
         - do: "Type `git add twofile.md`"
-          say: "First, we need to add twofile.md to the staging area."
+          say: "まずtwofile.mdをステージングする必要があります。"
         - do: "Type `git commit --amend`"
-          say: "Then we can type git commit --amend. Git will automatically add the content of the staging area to the last commit and open our text editor so we can change our commit message."
+          say: "次にgit commit --amendと入力します。Gitは自動的にステージングエリアにある内容を直前のコミットに追加した上でエディタを開いてコミットメッセージを修正するように促します。"
         - do: "Type the corrected commit message"
-          say: "Simply type a new commit message or you can keep the one you already typed if it was correct."
+          say: "ここで新しいコミットメッセージを入力することもできますし、必要なければ直前のコミットメッセージのままにしておくこともできます。"
         - do: "Click `Save > Quit`"
-          say: "Then save the commit message and close the text editor. In this case, we added a file and fixed the commit message. If you only wanted to fix the commit message, you would use the same command but leave the staging area empty."
+          say: "保存してエディタを閉じましょう。今回はファイルをコミットに追加し、コミットメッセージの修正もしました。単にコミットメッセージを修正したいだけなら、ステージングエリアに何も追加しない状態で同じコマンドを実行すれば実現できます。"
       production-notes:
   - lab:
-      title: Using Commit Amend
+      title: Commit Amendを使おう
       id: CONT-CLI-17-lab-02
       presenter-script:
-        - Now it is your turn to practice the steps we discussed.
+        - さあ、実際に試してみましょう
       steps:
-        - description: Create a new file called threefile.md.
+        - description: threefile.mdというファイルを作ってみます。
           id: CONT-CLI-17-02-threefile
-        - description: Add `threefile.md` to your previous commit.
+        - description: "`threefile.md`を直前のコミットに追加してみましょう。"
           id: CONT-CLI-17-02-amend
 additional-labs:
 additional-questions:

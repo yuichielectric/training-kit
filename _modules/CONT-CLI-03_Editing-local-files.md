@@ -1,52 +1,52 @@
 ---
 layout: module
 leadingpath: ../
-title: Editing Local Files
+title: ローカルファイルを変更する
 pre-requisites: CONT-CLI-02_Cloning-a-repository
-learning-objective: Edit files from the command line.
+learning-objective: コマンドラインでファイルを変更しましょう
 screens:
   - image-slide:
-      title: Editing Local Files
+      title: ローカルファイルを変更する
       image: edit-icon.jpg
       presenter-script:
-        - "Now that you have cloned the repository and checked out your branch, you are ready to make some changes to the local files. If you are familiar with using the command line to open and edit files, then much of this will be familiar to you. The only difference here is that we will be making our changes on a branch. Let's add more information to the bio we created earlier."
+        - "リポジトリをクローンしてブランチをチェックアウトしました。ローカルファイルを変更する準備ができました。コマンドラインでファイルを変更することに慣れているのであれば、この章のほとんどはお馴染みのことかもしれません。いままでと違うのは、変更をブランチに対して行うという点です。先ほど作った自己紹介ファイルに対してさらに情報を追加しましょう。"
   - video-slide:
-      title: Editing Local Files
+      title: ローカルファイルを変更する
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: Type `git branch`
-          say: "Before you make any changes, you will want to double check that you are on the correct branch."
+          say: "どんな些細な変更でも、変更をする前にいま自分が正しいブランチにいるかどうかをダブルチェックして確認してください。"
         - do: Type `cd bios`
-          say: "Technically you could just open the file with the Finder window or Windows Explorer, but let's stay purely on the command line for now and cd into the bios folder. "
+          say: "ファイルをファインダやエクスプローラで開くこともできますが、いまはコマンドライン上でbiosフォルダにcdで移動してみましょう。"
         - do: Type `atom <file-name.md>`
-          say: "I am going to modify my file in atom, so I will use the command line to open atom and the file all at once. You can use your favorite text editor to make changes to your file. "
+          say: "これからatomを使って編集します。コマンドラインからatomを開いてファイルを編集するということを行いますが、みなさんは好きなエディタを使って編集して構いません。"
         - do: Type changes in the file
-          say: Add more information about yourself to the end of the original file.
+          say: ファイルにあなた自身の情報を更に追加してください。
         - do: Click `Save > Quit`
-          say: "When you are finished, save the file and close the text editor. "
+          say: "終わったら保存してエディタを閉じましょう。"
         - do: Open the CLI
-          say:  Let's go back to the terminal window and take a look at what we have just done.
+          say: ターミナルに戻って自分たちが何をしたのか見てみましょう。
         - do: Type `git checkout master`
-          say: First, let's checkout the master branch.
+          say: まずmasterブランチをチェックアウトしてみましょう。
         - do: Type `atom <file-name.md>`
-          say: "When you open your file with the master branch selected, you will notice that the changes you just made to the file are not included. "
+          say: "masterブランチ上のファイルを開いてみると、先ほどの変更が含まれていないことに気づくはずです。"
         - do: Open the CLI
-          say: Now go back to your terminal window
+          say: ターミナルに戻りましょう
         - do: Type `git checkout <your branch>`
-          say: And check out your branch again.
+          say: 先ほどの自分のブランチをもう一回チェックアウトしてみましょう。
         - do: Type `atom <file-name.md>`
-          say: "Now when you open the file, the changes appear again because git is showing you the version of the file that exists on your branch."
+          say: "今度は変更が含まれているはずです。"
   - lab:
-      title: Editing Local Files
+      title: ローカルファイルを変更する
       id: CONT-CLI-03-lab-01
       presenter-script:
-        - Let's make some changes to our local files.
+        - ローカルファイルに変更をしてみましょう
       steps:
-        - description: Open your bio file in a text editor.
+        - description: 自分の自己紹介ファイルを開きます
           id: CONT-CLI-03-open
-        - description: Add more information to your bio.
+        - description: 自分の情報を追加します
           id: CONT-CLI-03-edit
-        - description: Save the file.
+        - description: ファイルを保存します
           id: CONT-CLI-03-save
 additional-labs:
 additional-questions:

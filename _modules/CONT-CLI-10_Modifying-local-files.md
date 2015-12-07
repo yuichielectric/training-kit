@@ -1,46 +1,46 @@
 ---
 layout: module
 leadingpath: ../
-title: Modifying Local Files
+title: ローカルファイルを変更する
 pre-requisites: CONT-CLI-09_Pulling-changes
-learning-objective: Experience common commit scenarios.
+learning-objective: よくあるシナリオを体験してみましょう
 screens:
   - video-slide:
-      title: Modifying Local Files
+      title: ローカルファイルを変更する
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Type `atom <file-name.md>`"
-          say: "Now that our local branch is up-to-date with the master, let's simulate two common scenarios you will encounter when working locally on the command line. First, let's open the file we created earlier."
+          say: "いまローカルブランチはmasterと同じ最新状態になっています。これから、コマンドラインを使ってローカルで作業をしているとよく遭遇する2つのシナリオをシミュレーションしてみましょう。まず、前に作成したファイルを開きます。"
         - do: "Make and save changes"
-          say: "Make a few changes and then save the file."
+          say: "変更をいくつか加えて、ファイルを保存します。"
         - do: "Type `git status`"
-          say: "When we type git status we can see that the file is modified but not staged for commit. But, there is a problem. We are still working on our master branch. We want to make our changes on a feature branch."
+          say: "git statusしてみると、ファイルは変更されたけれどもまだステージングされていないことがわかります。でも問題があります。実はまだmasterブランチ上で作業していました。変更はフィーチャーブランチ上で行わないといけませんでしたよね。"
         - do: "Type `git checkout -b <branch-name>`"
-          say: "Fortunately, there is only one working directory and one staging area. This means we can still create a new branch before we commit the file. To do this, let's use a shortcut to create the branch and checkout at the same time. To do this, we add the -b option to git checkout."
+          say: "幸い、まだワーキングディレクトリとステージングエリアがあるだけです。つまりファイルをコミットする前に新しいブランチを作ることができるのです。さてここでは、ブランチを作りつつチェックアウトする事のできるショートカットを使ってみましょう。git checkoutに-bオプションを付ければいいのです。"
         - do: "Type `git add <file-name.md>`"
-          say: "Now we are ready to add the file to the staging area."
+          say: "ファイルをステージングする準備が整いました。"
         - do: "Type `git status`"
-          say: "Git status shows us that the file is ready to be committed. But I just remembered that I had one more change to make."
+          say: "git statusするとファイルをコミットする準備が整ったことがわかります。でも実は個々でまだ変更しないといけないことが残っていたことを思い出しました。"
         - do: "Make and save more changes"
-          say: "Go back to the file and make a few more changes and save them."
+          say: "ファイルに戻って更に変更をして、保存します。"
         - do: "Type `git status`"
-          say: "Now when we type git status, the same file appears both in the changes to be committed and the changes not staged for commit. If we were to commit this file right now, only the first set of changes would actually be committed."
+          say: "さてここでgit statusすると、同じファイルがコミット可能な状態とまだステージングされていない状態と2つの状態に分かれて見えます。もしいまこのままコミットすると、最初の変更だけが実際の変更としてコミットされることになります。"
       production-notes:
   - lab:
-      title: Modifying Local Files
+      title: ローカルファイルを変更しよう
       id: CONT-CLI-10-lab-01
       presenter-script:
-        - Go ahead and set up your files for the next activity.
+        - 次の章の準備のために、ファイルの変更をして上記の状態を作りましょう
       steps:
-        - description: "Open your file and make a few changes."
+        - description: "ファイルを開いて変更をします"
           id: CONT-CLI-10-edit-01
-        - description: "Save the changes and add them to the staging area. **Do not commit the changes yet.**"
+        - description: "変更を保存して、ステージングします **この時点ではコミットしないでください**"
           id: CONT-CLI-10-stage
-        - description: "Open the same file and make a few more changes."
+        - description: "同じファイルをまた開いて、別の変更を追加します"
           id: CONT-CLI-10-edit-02
-        - description: "Save the changes."
+        - description: "保存します"
           id: CONT-CLI-10-save
-        - description: "Run git status."
+        - description: "git statusします"
           id: CONT-CLI-10-status
 additional-labs:
 additional-questions:
