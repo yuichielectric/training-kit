@@ -32,6 +32,7 @@ screens:
       title: プロジェクトの履歴をみてみよう
       id: CONT-CLI-13-lab-01
       presenter-script:
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/Ew8HQsFyVHo" frameborder="0" allowfullscreen></iframe><br/>
         - git log のオプションをいろいろ試してみましょう
       steps:
         - description: "git logをしてみましょう"

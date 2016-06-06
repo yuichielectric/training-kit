@@ -27,6 +27,7 @@ screens:
       title: Diffを確認して変更をコミットしましょう
       id: CONT-CLI-11-lab-01
       presenter-script:
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/RXSriVcoI70" frameborder="0" allowfullscreen></iframe><br/>
         - git diffのオプションについていろいろ試してみましょう
       steps:
         - description: いろいろな変更をしてみて、git diffをするとどうなるか見てみましょう
