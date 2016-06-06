@@ -1,42 +1,42 @@
 ---
 layout: module
 leadingpath: ../
-title: Pulling Changes from the Remote
+title: リモートから変更をPullしてこよう
 pre-requisites: CONT-CLI-08_Workflow-review
-learning-objective: Pulling changes from the remote into your local repository.
+learning-objective: リモートからローカルへ変更をPullしてみましょう。
 screens:
   - image-slide:
-      title: Pulling Changes from the Remote
+      title: リモートから変更をPullしてこよう
       image: push-pull.jpg
       presenter-script:
-        - Frequently, collaborators will make changes to our files during the Pull Request process. Before we can go on, we will need to update our local copy of the file.
-        - We use push to send our changes to the remote, but we use pull to retrieve changes from the remote. When we pull the files from the remote git downloads a copy of the new commits that have been added to the branch since our last pull and then attempts to merge them into our local branch.
+        - フローの中で、コラボレータは頻繁にファイルを変更します。ですので、作業を始める前に、ローカルファイルを最新にアップデートする必要があります。
+        - リモートに変更を送信するのにPushを使いましたが、変更を受信するにはPullを使います。リモートからPullしてくると、Gitは前回Pullした時と比較して新しく追加されたコミットをダウンロードします。そしてローカルブランチにそのコミットをマージしようとします。
   - video-slide:
-      title: Pulling Changes from the Remote
+      title: リモートから変更をPullしてこよう
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Open the CLI"
-          say: "Let's go back to our terminal window."
+          say: "ターミナルを開いてください。"
         - do: "Type `git checkout master`"
-          say: "Since our changes have already been merged to master on the remote, let's go ahead and checkout to our master branch."
+          say: "既にリモート上では変更がmasterにマージされています。masterをチェックアウトしてみてください。"
         - do: "Type `git pull`"
-          say: "Now we will type git pull. Git already knows that our local branch master is related to the remote branch master, so we do not need to tell git where to pull from."
+          say: "git pullしてみてください。Gitは既に皆さんのローカルブランチがリモートのmasterブランチと関連づいていることを知っていますから（-uでUpstreamを設定しましたよね）、GitにどこからPullすべきかを教える必要はありません。"
         - do: "Show output"
-          say: "After the pull is complete, git provides a report of the changes that were pulled from the remote and lets us know they were successfully merged."
+          say: "Pullが終わると、GitはリモートからPullしてきた変更がもたらした内容についてレポートしてくれます。そしてマージがつつがなく終わったことを教えてくれます。"
         - do: "Type `git branch`"
-          say: "You will notice that, even though you deleted the branch on GitHub, the local copy of your branch still exists."
+          say: "気づくと思いますが、たとえGitHub上でブランチを消していても、ローカルのブランチは消えたりせず存在しています。"
         - do: "Type `git branch --merged`"
-          say: "To see which local branches have already been merged into master, you can add the --merged option to the git branch command. Your branch should be listed. Generally, this means it is safe to delete the branch."
+          say: "どのローカルブランチが既にmasterにマージされたかを知るには、git branchコマンドに--mergedオプションをつければよいです。あなたのローカルブランチがリストされているのが見えるはずです。この場合一般的に言って、ローカルのブランチを消しても安全だということです。"
         - do: "Type `git branch -d <branch-name>`"
-          say: "To delete the branch, simply use the git branch command with the -d option."
+          say: "ブランチを消すには、git branchコマンドに-dオプションを付ければよいです。"
       production-notes:
   - lab:
-      title: Pulling Changes
+      title: 変更をPullする
       id: CONT-CLI-09-lab-01
       presenter-script:
-        - Let's update your local copy of the repository.
+        - ローカルのリポジトリをアップデートしましょう
       steps:
-        - description: "Retrieve the changes from the remote."
+        - description: "リモートから変更を取り込みます"
           id: CONT-CLI-09-pull
 additional-labs:
 additional-questions:

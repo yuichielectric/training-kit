@@ -1,54 +1,54 @@
 ---
 layout: module
 leadingpath: ../
-title: Workflow Review
+title: ワークフローレビュー
 pre-requisites: CONT-CLI-07_Creating-local-branches
-learning-objective: Review the GitHub flow using the command line.
+learning-objective: コマンドラインを使ってGitHub Flowを復習してみましょう
 screens:
   - video-slide:
-      title: Workflow Review
+      title: ワークフローレビュー
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Show https://guides.github.com/introduction/flow/"
-          say: "Remember that branching is fundamental to the GitHub flow. Now that we have created our branch, let's take a moment to review the rest of the workflow without any breaks for explanations like we did the first time. This time, lets create a file to tell others a few things they can do when they visit our home town. Along the way, I will show you a few helpful shortcuts."
+          say: "GitHub Flowにおいてブランチ作成がすべての基本であることを思い出してください。ブランチを作ったところで、ワークフローの残りの部分を復習してみましょう。最初にしたように詳細には説明しませんので、各自で見なおしてください。今回は次のようなファイルを作ってみましょう。他の参加者にあなたの街を訪れた時に見たほうが/やったほうがいいもののリストです。このファイルを作る中で、いくつかの便利なショートカットを紹介します。"
         - do: "Type `echo \"Welcome to My Home Town\" > home-town.md`"
-          say: "Let's use the echo command to create our new file. Name the file after your home town and add .md to the end so it will be rendered as markdown."
+          say: "echoコマンドを使ってファイルを作りましょう。ファイル名を決める際は、皆さんの街の名前をローマ字で書いた後、.md を拡張子として追加してください。"
         - do: "Type `git status`"
-          say: "When we type git status, we will see that we have a new untracked file."
+          say: "git statusとタイプすると、新たなuntrackedなファイルがあることを確認できます。"
         - do: "Type `git add .`"
-          say: "We want to add this file to our next commit so we will add it to the staging area. Git add . is a shortcut that tells git to add all of the new or modified files to the staging area."
+          say: "このファイルを次のコミットに追加したいので、このファイルをステージングエリアに追加しましょう。Git add . というのはGitに実行ディレクトリにあるすべての新規ファイルとmodifiedファイルをステージングエリアに追加してくれとお願いする際のショートカットです。"
         - do: "Type `git commit -m\"commit message\"`"
-          say: "Let's go ahead and commit our file. This time, instead of opening the text editor to type our commit message, we will use the -m option to tell git that we are including our message in quotes after this command."
+          say: "さあファイルをコミットしましょう。今回は、コミットメッセージを入力するたびにテキストエディタを開く代わりの方法をお伝えします。-m オプションを使うことで、コミットコマンドと同時に引用符の中にメッセージを入力することができます。"
         - do: "Type `git push -u origin <branch-name>`"
-          say: "Now let's push the changes to the remote, setting the remote tracking branch by adding the -u option."
+          say: "次に変更をリモートにプッシュしましょう。-u オプションを追加することで、リモートトラッキングブランチ(upstreamともいいます)を設定することができます。"
         - do: "Open GitHub"
-          say: "Next we will go back to GitHub and open a Pull Request."
+          say: "次にGitHubに戻って、Pull Requestを作りましょう。"
         - do: "Click `Compare & Pull Request`"
-          say: "GitHub recognizes that you have pushed a new branch and will ask you to create a Pull Request. Click the green button to start your Pull Request."
+          say: "GitHubは新しくPushされたブランチを検知して、Pull Requestを作るかどうか聞いてきます。緑のボタンを押して作成を始めましょう。"
         - do: "Type a pull request `Title` and `Description`"
-          say: "Enter a descriptive title and description for the Pull Request."
+          say: "内容が分かるようなTitleとDescriptionを書きましょう。"
         - do: "Click `Create Pull Request`"
-          say: "And create your Pull Request."
+          say: "そうして Pull Request を作りましょう。"
         - do: "Click `Merge Pull Request`"
-          say: "When the discussion ends and the file is ready, you will then merge your pull request with the master branch to complete the process."
+          say: "議論が終わり、マージの準備が整ったら Pull Request をmasterにマージしてプロセスを終了しましょう。"
         - do: "Click `Delete branch`"
-          say: "Since your branch has been merged, it is safe to delete it now."
+          say: "マージできたら、もうブランチを削除しても安全です。"
       production-notes:
   - lab:
-      title: Workflow Review
+      title: ワークフローレビュー
       id: CONT-CLI-08-lab-01
       presenter-script:
-        - Now you will have a chance to complete the workflow on your own.
+        - さらにいろいろ試してみましょう。
       steps:
-        - description: "Create a new file on your branch."
+        - description: "ブランチ上で新しいファイルを作ってみましょう。"
           id: CONT-CLI-08-create-file
-        - description: "Add the file to staging and commit it locally."
+        - description: "ファイルをステージングして、ローカルでコミットしてみましょう。"
           id: CONT-CLI-08-commit
-        - description: "Push your file to the remote."
+        - description: "ファイルをリモートにPushしてみましょう"
           id: CONT-CLI-08-push
-        - description: "Create a pull request on GitHub."
+        - description: "Pull Requestを作ってみましょう。"
           id: CONT-CLI-08-pull-request
-        - description: "Merge your changes into Master."
+        - description: "Masterに変更をマージしましょう。"
           id: CONT-CLI-08-merge
 additional-labs:
 additional-questions:
