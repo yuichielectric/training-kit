@@ -1,12 +1,12 @@
 ---
 layout: module
 leadingpath: ../
-title: ファイルをアンステージする
+title: ステージングされたファイルを取り消す
 pre-requisites: CONT-CLI-17_Fixing-bad-commits
-learning-objective: ファイルを案ステージする際に何ができるかを学びます。
+learning-objective: ステージングされたファイルを取り消す際に何ができるかを学びます。
 screens:
   - video-slide:
-      title: ファイルをアンステージする
+      title: ステージングされたファイルを取り消す
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Type `echo \"This is my file to unstage.\" > unstageme.md`"
@@ -19,7 +19,7 @@ screens:
           say: "これによってファイルをアンステージし、ワーキングディレクトリに戻すことができます。このファイルにさらに変更を追加して次のコミットのためにステージングし直すこともできます。"
       production-notes:
   - lab:
-      title: ファイルをアンステージする
+      title: ステージングされたファイルを取り消す
       id: CONT-CLI-18-lab-01
       presenter-script:
         - Now it is your turn to practice unstaging a file.

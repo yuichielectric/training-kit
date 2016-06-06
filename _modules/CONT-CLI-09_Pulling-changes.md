@@ -34,6 +34,7 @@ screens:
       title: 変更をPullする
       id: CONT-CLI-09-lab-01
       presenter-script:
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/xdao5LCNoYE?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-" frameborder="0" allowfullscreen></iframe><br/>
         - ローカルのリポジトリをアップデートしましょう
       steps:
         - description: "リモートから変更を取り込みます"

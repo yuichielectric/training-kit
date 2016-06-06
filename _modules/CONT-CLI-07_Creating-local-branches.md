@@ -24,6 +24,8 @@ screens:
       title: ローカルブランチを作る
       id: CONT-CLI-07-lab-01
       presenter-script:
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/H5GJfcp3p4Q?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-" frameborder="0" allowfullscreen></iframe><br/>
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/HwrPhOp6-aM?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-" frameborder="0" allowfullscreen></iframe><br/>
         - さあローカルブランチを作ろう！
       steps:
         - description: "次のようにユーザーネームを含んだブランチ名を作ってみよう: `githubusername-branch`."

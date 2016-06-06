@@ -38,6 +38,8 @@ screens:
       title: ワークフローレビュー
       id: CONT-CLI-08-lab-01
       presenter-script:
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/5oJHRbqEofs?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-" frameborder="0" allowfullscreen></iframe><br/>
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/d5wpJ5VimSU?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-" frameborder="0" allowfullscreen></iframe><br/>
         - さらにいろいろ試してみましょう。
       steps:
         - description: "ブランチ上で新しいファイルを作ってみましょう。"
