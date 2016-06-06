@@ -1,51 +1,52 @@
 ---
 layout: module
 leadingpath: ../
-title: Creating a Repository on GitHub
+title: GitHub上でリポジトリを作る
 pre-requisites: CONT-CLI-05_Sync-changes
-learning-objective: Describe best practices for creating a new repository and adding collaborators on GitHub.
+learning-objective: GitHub上で新しいリポジトリを作り、コラボレータを追加するベストプラクティスについて学びましょう。
 screens:
   - image-slide:
-      title: Options for Creating a Repository
+      title: リポジトリを作る際の選択肢
       image: repository-options.jpg
       presenter-script:
-        - "All of the work we do in Git and GitHub happens inside of a repository. There are two ways to get started working with a new repository. You can:"
-        - "1. Clone the repository from a remote"
-        - "2. Initialize Git in an existing local directory"
-        - "Since this class is designed to teach you how to use Git and GitHub effectively, we will focus on how to structure our work to support collaboration."
-        - "If I want to collaborate with you on a project then I will start a repository on GitHub. Let's discuss some best practices for GitHub repositories now."
+        - "GitとGitHubを使って作業をする際には、リポジトリが必要です。新しくリポジトリを作るには2つの方法があります。 "
+        - "1. リモートからリポジトリをクローンする "
+        - "2. ローカルディレクトリ上で Git Init する "
+        - "このセッションはGitとGitHubを効果的に使うにはどうすればいいかを伝えることにフォーカスしています。そのためここではコラボレーションを効果的に行うためにはどうしたらいいかという観点で考えたいと思います。"
+        - "もし私があなたと一緒にプロジェクトを行いたいと思ったら、まずはGitHub上でリポジトリを作るところからスタートします。さあ、どうしたら最も効率的なのか、議論してみましょう。"
+
   - video-slide:
-      title: Creating a Repository on GitHub
+      title: GitHub上でリポジトリを作る
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
-        - do: "Click the dropdown arrow next to the `+` and select `Create New Repository`"
-          say: "Creating a new repository is just a few clicks on GitHub. First, select the option to Create New Repository"
-        - do: "Enter a repository name"
-          say: "The name of your repository must be unique to your account. If you are feeling un-creative, GitHub even offers some fun repository name suggestions."
+        - do: "`+` の隣にある矢印をクリックして、 `Create New Repository` を選択する"
+          say: "GitHubで新しいリポジトリを作るのはわずか数クリックでできます。まず、Create New Repository を選択してください。"
+        - do: "リポジトリ名を入力する"
+          say: "リポジトリ名はアカウント内でユニークでないといけません。どんな名前をつけたらいいか迷った場合には、GitHubが自動で作ってくれる名前を使うのも一つの手です。"
         - do: "Enter the repository description"
-          say: "The repository description is a short description of what your repository is about."
+          say: "Descriptionにリポジトリの簡単な説明を書いてください。"
         - do: "Select `Public`"
-          say: "You can choose to make your repository public or private. If you create a public repository on GitHub.com, then anyone with a GitHub.com login can view, clone or fork your project BUT they cannot push changes to the repository unless you add them as a collaborator. Public repositories are free. If you choose to make your repository private then you must give explicit permissions for viewing, cloning, etc. You will pay a small fee for private repositories."
+          say: "リポジトリをPublicにするかPrivateにするかを選択できます。GitHub.com上でPublicなリポジトリを作ると、誰でもそのコードをみることができ、Cloneしたりプロジェクトをフォークしたりできる状態になりますが、あなたが彼らをコラボレータとしてリポジトリに追加しないかぎりは変更をPushすることはできません。Publicリポジトリは無料で使えます。リポジトリをPrivateにすると、明示的に権限を与えられた人でない限りみることもCloneすることも何もできません。Privateリポジトリを使うには少量の金額を支払う必要があります。"
         - do: "Click `Initialize with a README`"
-          say: "The README is the welcome mat to your repository and has special powers on GitHub. It allows you to give a proper introduction to your repository. GitHub will automatically render any README it finds in your repository and its sub-directories just below the file tree."
+          say: "READMEはあなたのリポジトリの玄関マットのようなものです。GitHubにおいては特別な挙動をします。リポジトリの情報を書いておくことができます。GitHubはリポジトリの直下にあるREADMEファイルを自動的にレンダリングしてくれます。なおこの機能は各サブディレクトリ内においても有効です。サブディレクトリの直下にREADMEを置くと、そのディレクトリのREADMEとしてレンダリングしてくれます。"
         - do: "Show gitignore options"
-          say: "A gitignore file tells git which types of files should not be tracked. You can use the drop down here to choose from a list of commonly used languages to pre-populate your gitignore file with file types that are frequently ignored for those languages. You can always edit the gitignore directly for greater precision."
+          say: "gitignoreを使うと、Gitにトラッキングしてほしくないファイルのタイプを定義することができます。ドロップダウンリストを参照すると、よく使われる言語については既にgitignoreが用意されており、その言語で通常トラッキング対象外にするファイルのタイプが予め定義されています。もちろんここで選んで作成されたgiignoreをあとから自分で編集することもできます。"
         - do: "Show license and the information icon"
-          say: "A project isn't open source if it doesn't have a license. There are many different licenses to choose from and we realize it can be confusing to find the right one, so we have created this helpful license selection tool to help you get started."
+          say: "ライセンスがなければ、オープンソースのプロジェクトとはいえません。ライセンスには様々な種類があります。正しいものを選択するのは難しいと思います。そのために我々はここでLICENSEを選択することができるようにしているのです。ヘルプを参照すれば世の中にどんなライセンスがあるのかもわかります。"
         - do: "Click `Create Repository`"
-          say: "Now let's create our repository."
+          say: "さあ、リポジトリを作りましょう。"
         - do: "Click `Settings > Collaborators`"
-          say: "Since I want to work with others on this project, I need to add them as collaborators. This process is slightly different for organization accounts."
+          say: "他の人に一緒にこのプロジェクトで作業したいと思ったとします。その際にはその人をコラボレータとして追加する必要があります。この作業はOrganizationにアカウントを追加するのとはちょっと違います。"
         - do: "Start typing `githubstudent`"
-          say: "I can search for collaborators and add them by entering the first few letters of their username."
+          say: "ユーザーネームの最初の何文字かをタイプするだけで、コラボレータとして追加したい人を探しだすことができます。"
       production-notes:
   - lab:
-      title: Cloning the Repository
+      title: リポジトリをクローンしよう
       id: CONT-CLI-06-lab-01
       presenter-script:
-        - Now that we have created a repository on GitHub, let's clone the new repository to our desktop.
+        - GitHub上にリポジトリを作りました。これを自分のローカルPCにクローンしてみましょう。
       steps:
-        - description: "Clone the new repository to your desktop."
+        - description: "自分のローカルPCにクローンしてみましょう"
           id: CONT-CLI-06-clone
 additional-labs:
 additional-questions:

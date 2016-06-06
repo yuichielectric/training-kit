@@ -1,32 +1,32 @@
 ---
 layout: module
 leadingpath: ../
-title: Creating Local Branches
+title: ローカルでブランチを作る
 pre-requisites: CONT-CLI-06_Creating-repository-github
-learning-objective: Create a branch locally using the command line.
+learning-objective: コマンドラインを使って、ローカルにブランチを作ってみよう
 screens:
   - video-slide:
-      title: Creating Branches Locally
+      title: ローカルでブランチを作る
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
-        - do: "Open the CLI"
-          say: "The first thing we want to do is to create a local branch."
+        - do: "ターミナルを開く"
+          say: "これからローカルブランチを作ります。"
         - do: "Type `git branch`"
-          say: "We just created this repository and cloned it to our local computer, so if we type git branch the only branch we will see is master and master is already checked out. When we create a new local branch, it is automatically going to create a branch off of the branch we are currently on. If we were working on a more mature repository, we would want to verify that we are on master before we go on."
+          say: "先ほどリポジトリを作ってローカルPCにクローンしました。git branchとタイプするとmasterブランチだけが見え、既にチェックアウトされていると思います。ブランチを作ると、自動的に今いるブランチを元にして新しいブランチが作られます。開発が進んでいくとたくさんのブランチができていきますから、ブランチを作る前には自分がmasterブランチにいるかどうかをまず確認したほうが良いでしょう。"
         - do: "Type `git branch <branch-name>`"
-          say: "Let's type git branch and the name of the branch we would like to create. Branch names cannot contain spaces so we generally use the (-)hyphen to separate words in our branch names."
+          say: "さあ、git branchとタイプし、続けて作成したいブランチの名前を入れましょう。ブランチ名はスペースを含むことはできないので、かわりにハイフンを使うといいでしょう。"
         - do: "Type `git branch`"
-          say: "Now when we type git branch we see the name of our new branch, but we are still checked out to master."
+          say: "またgit branchと入力すると、今度は新しいブランチも見えるはずです。でもまだmasterをチェックアウトしています。"
         - do: "Type `git checkout <branch-name>`"
-          say: "Type git checkout with the name of your branch to check out to your new branch."
+          say: "git checkoutとタイプし、続けてチェックアウトしたいブランチ名を入れましょう。"
       production-notes:
   - lab:
-      title: Create a Local Branch
+      title: ローカルブランチを作る
       id: CONT-CLI-07-lab-01
       presenter-script:
-        - Go ahead and create a local branch now!
+        - さあローカルブランチを作ろう！
       steps:
-        - description: "Create a local branch using your username as follows: `githubusername-branch`."
+        - description: "次のようにユーザーネームを含んだブランチ名を作ってみよう: `githubusername-branch`."
           id: CONT-CLI-07-branch
 additional-labs:
 additional-questions:
