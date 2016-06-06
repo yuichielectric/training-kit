@@ -1,22 +1,22 @@
 ---
 layout: module
 leadingpath: ../
-title: Removing Tracked Files
+title: Trackedファイルの削除
 pre-requisites: CONT-CLI-21_Handling-merge-conflicts
-learning-objective: Discover how to remove files from tracking.
+learning-objective: トラッキングしているファイルの削除の方法を学びましょう。
 screens:
   - video-slide:
-      title: Removing Tracked Files
+      title: Trackedファイルの削除
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Type `ls -lr`"
-          say: "Sometimes we need to remove a file that is already being tracked. We could just delete the file and then stage and commit the change. But let's use a shortcut to delete our conflict.md file."
+          say: "既にトラック済みのファイルを削除したい時があります。ただファイルを削除して、ステージングしてコミットする方法もありますが、もっと簡単なショートカットを使ってみましょう。"
         - do: "Type `git rm conflict.md`"
-          say: "We can use the git rm command, followed by the file we would like to delete."
+          say: "git rmコマンドを使うと、ファイルを削除できます。"
         - do: "Type `git status`"
-          say: "When we type git status, we can see that the file has already been staged and is ready for us to commit."
+          say: "git statusとタイプすると、既に削除したファイルがステージング済みでコミットを待っていることがわかります。"
         - do: "Type `git commit -m\"remove conflict file\"`"
-          say: "Now we simply need to commit the change."
+          say: "あとはコミットするだけです。"
       production-notes:
   - lab:
       title: Removing Tracked Files

@@ -1,41 +1,54 @@
 ---
 layout: module
 leadingpath: ../
-title: Discarding Changes in Modified Files
+title: Modifiedファイルの変更を破棄する
 pre-requisites: CONT-CLI-19_Resetting-history
-learning-objective: Discover steps you can take when you need to discard the changes made in unstaged files.
+learning-objective: unstagedファイルに施した変更を破棄する方法を学びましょう。
 screens:
   - video-slide:
-      title: Discarding Changes in Modified Files
+      title: Modifiedファイルの変更を破棄する
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Type `echo \"This is my original content\" > changeme.md`"
-          say: "Next we will discuss how to discard changes to a modified file. First, let's create a file called changeme.md with some basic text inside."
+          say: "次に変更したファイル中の変更をどうやって破棄したらいいかについて学びます。まず、changeme.mdというファイルを作りましょう。"
         - do: "Type `git add changeme.md`"
-          say: "Since we want to work on this file in the modified state, we will need to have a snapshot of this file. Let's go ahead and add this file to version control."
+          say: "このファイルをmodified状態にしたいので、まずはこのファイルの履歴をバージョン管理下に置きたいです。ファイルをステージングしましょう。"
         - do: "Type `git commit -m\"Original changeme.md file\"`"
-          say: "And commit it."
+          say: "そしてコミットします。"
         - do: "Type `echo \"This is the content I will throw away\" >> changeme.md`"
-          say: "Now we will append some text to the end of our file."
+          say: "ファイルの末尾にさらにテキストを追加します。"
         - do: "Type `git status`"
-          say: "Next we will type git status. Notice that the file now shows it has been modified. Git tries to be helpful here by telling us exactly how to remove the changes to this file."
+          say: "次にgit statusとタイプすると、ファイルがmodifiedになっていることに気づくかと思います。Git はここでも親切にどうやったらファイルから変更を破棄できるかを教えてくれています。"
         - do: "Type `git checkout -- changeme.md`"
-          say: "Git tells us to type git checkout. We are already familiar with this command from using it to checkout branches, but this time we will include the -- to tell git we are talking about a file. Then we add the file name."
+          say: "Gitはgit checkoutするように教えてくれています。このコマンドは既にブランチをチェックアウトするときなどでおなじみかと思いますが、今回はそこに -- というオプションを加えることで今はファイルについてチェックアウトしたいんだとGitに知らせています。そしてファイル名を知らせます。"
         - do: "Type `git status`"
-          say: "If I type git status, you will see the file no longer appears as a modified file and my working directory is clean."
+          say: "git statusとタイプすると、modifiedファイルが消えて、ワーキングディレクトリも綺麗になっていることがわかります。"
         - do: "Type `cat changeme.md`"
-          say: "And if I look at the contents of my file, you will see that the second line of text I added is now gone. It is important to remember that this is a destructive operation. Any changes you made to the file since your last commit will be gone forever. This command overwrites the modified file with the previously committed version so it is as if your changes never happened."
+          say: "ファイルの中身を見てみると、2行目に追加した変更が消えていることがわかります。重要な事ですが、このコマンドは破壊的なオペレーションです。最後のコミットの後に追加した変更は永遠に消え去ります。このコマンドはmodifiedファイルを直前にコミットしたバージョンで上書きし、まるで変更が全くなかったかのようにしてしまいます。"
       production-notes:
   - lab:
-      title: Discarding Changes in Modified Files
+      title: Modifiedファイルの変更を破棄する
       id: CONT-CLI-20-lab-01
       presenter-script:
-        - Now it is your turn to practice discarding changes to modified files.
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/BKPjPMVB81g" frameborder="0" allowfullscreen></iframe>
       steps:
         - description: Edit the file `threefile.md`.
           id: CONT-CLI-20-edit
         - description: "Use `git checkout` to discard your changes."
           id: CONT-CLI-20-checkout
+
+  - lab:
+      title: Reflog
+      id: CONT-CLI-20-lab-02
+      presenter-script:
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/Vxc9m_OVyo0" frameborder="0" allowfullscreen></iframe><br/>
+        - ResetにせよCheckoutにせよ、履歴を操作するコマンドです。特に破壊的なオペレーションには気をつけましょう。ですが、ステージングやワーキングディレクトリの内容は消える可能性がありますが、コミットした履歴は消えることがありません。こまめにコミットを作ってさえいれば後から復旧することは可能なのです。
+
+  - lab:
+      title: Rebase
+      id: CONT-CLI-20-lab-02
+      presenter-script:
+        　- <iframe width="560" height="315" src="https://www.youtube.com/embed/SxzjZtJwOgo" frameborder="0" allowfullscreen></iframe>
 additional-labs:
 additional-questions:
 resources:

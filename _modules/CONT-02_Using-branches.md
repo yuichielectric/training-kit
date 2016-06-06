@@ -1,19 +1,19 @@
 ---
 layout: module
 leadingpath: ../
-title: Using Branches
+title: ブランチを使ってみよう
 pre-requisites: CONT-01_Understanding-github-flow
-learning-objective: Create a branch to separate feature work from the master branch.
+learning-objective: ブランチを作って、masterブランチと新機能の開発作業が混ざらないようにしよう。
 screens:
   - image-slide:
-      title: Using Branches
+      title: ブランチを使ってみよう
       image: branch-icon.jpg
       presenter-script:
-        - Every day you will be editing files on your project or adding new files.
-        - You don't want to take risks with the code on your master branch so you need to create a branch.
-        - When you create a branch, you are essentially creating an identical copy of the project at that point in time that is completely separate from the master branch.
-        - This keeps your the code on your master branch safe while you experiment and fix issues.
-        - Let's learn how you can create a new branch.
+        - プロジェクトにおいて、毎日ファイルを編集したり新しくファイルを追加したりしていると思います。
+        - masterブランチのコードにリスクのあるコードを入れたくないのであれば、ブランチを作る必要があります。
+        - ブランチを作るということは、基本的にはその時点でのプロジェクトと全く同一のコピーをmasterブランチと完全に切り端された形で作ることになります。
+        - これによって、あなたが問題解決のためにコードを修正して挙動の変化を確認している時でも、masterブランチのコードを変更することなくそのまま維持しておくことができます。
+        - さあ、ブランチの作り方を学びましょう。
   - video-slide:
       title: Creating a Branch
       video: http://youtu.be/xgQmu81G1yY

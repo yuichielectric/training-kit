@@ -1,16 +1,16 @@
 ---
 layout: module
 leadingpath: ../
-title: Understanding the GitHub Flow
+title: GitHub Flow について理解しよう
 pre-requisites: COLL-02_Using-issues
 learning-objective: Describe the collaborative workflow enabled by GitHub.
 screens:
   - video-slide:
-      title: Understanding the GitHub Flow
+      title: GitHub Flow について理解しよう
       video: http://youtu.be/PBI2Rz-ZOxU
       video-script:
-        - do: Show the GitHub flow at https://guides.github.com/introduction/flow/
-          say: The GitHub flow is a lightweight workflow that allows you to experiment with new ideas safely, without fear of compromising a project.
+        - do: GitHub flow を確認する https://guides.github.com/introduction/flow/
+          say: GitHub flow は軽量なワークフローです。新しいアイディアを試したり、実験したりすることを安全にそして妥協することなく行うことができるようになります。
         - do: Highlight the master icon
           say: Branching is a key concept you will need to understand. Everything in GitHub lives on a branch. By convention, the "blessed" or "canonical" version of your project lives on a branch called `master`.
         - do: Show the branch icon

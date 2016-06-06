@@ -1,32 +1,32 @@
 ---
 layout: module
 leadingpath: ../
-title: Creating a Repository on the Command Line
+title: コマンドラインからリポジトリを作る
 pre-requisites: CONT-CLI-13_Viewing-project-history
-learning-objective: Create a local repository on the command line.
+learning-objective: コマンドラインからリポジトリを作ろう
 screens:
   - video-slide:
-      title: Creating a Repository on the Command Line
+      title: コマンドラインからリポジトリを作る
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Type `cd`"
-          say: "Earlier we learned how to create a repository on GitHub and clone it to our local desktop. Sometimes, we want to start a project locally and then push it up to the remote. To do this, we will need to create a local repository. Go ahead and navigate to a location where we can create a new directory."
+          say: "GitHubでリポジトリを作るやりかたと、ローカルPCへのCloneの仕方については既に学びました。ですが、場合によってはローカルでプロジェクトを始めて、その後にリモートにPushしたいというケースも有ります。これを実現するには、ローカルにリポジトリを作る方法を知る必要があります。どこか作業してもいいディレクトリに移動して、新規にディレクトリを作成しましょう。"
         - do: "Type `git init scratch`"
-          say: "We can initialize a repository inside an existing project, or we can start one from scratch. We are going to go ahead and create a scratch project that we can use to learn how to make changes and rewrite history. To do this, we can type git init and the directory name. Git will create a new directory called scratch and initialize git inside this directory."
+          say: "既に存在しているプロジェクトの中に入ってリポジトリを初期化することもできれば、全く新規に作ることもできます。ここではscratchプロジェクトを新規に作ってみましょう。このプロジェクト内で、これから変更履歴の作り方や、履歴の書き換え方法などを学びます。git initの後にディレクトリ名をタイプしてください。Gitが新しくscratchというディレクトリを作ってそのディレクトリの中をGitリポジトリとして初期化してくれます。"
         - do: "Type `cd scratch`"
-          say: "After you see a confirmation message, go ahead and cd into scratch."
+          say: "Git initのメッセージを確認したら、scratchフォルダに移動してください。"
         - do: "Type `ls -la`"
-          say: "Let's see what just happened. When we typed git init, git created this new file called .git and saved it in the directory. This is where all of the git internals are located."
+          say: "何が起きるか見てみましょう。git initとタイプすると、gitは.gitと呼ばれるファイルを作ります。この中にGitの内部ファイルがすべて入っています。"
         - do: "Type `echo \"This is my scratch project\" > README.md`"
-          say: "At this point, there is nothing in our repository, so let's create a README file."
+          say: "この時点ではリポジトリには何もありません。ですのでREADMEファイルを作りましょう。"
         - do: "Type `git add README.md` and `git commit -m\"add README.md\"`"
-          say: "Then we will add and commit our file."
+          say: "そしてファイルをステージングしてコミットしましょう。"
       production-notes:
   - lab:
       title: Creating a Repository on the Command Line
       id: CONT-CLI-14-lab-01
       presenter-script:
-        - It's time to create your own local repository.
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/WxMFZncm12s" frameborder="0" allowfullscreen></iframe>
       steps:
         - description: Initialize a new git repository.
           id: CONT-CLI-14-init

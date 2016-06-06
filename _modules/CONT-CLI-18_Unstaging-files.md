@@ -1,25 +1,25 @@
 ---
 layout: module
 leadingpath: ../
-title: Unstaging Files
+title: ファイルをアンステージする
 pre-requisites: CONT-CLI-17_Fixing-bad-commits
-learning-objective: Discover steps you can take when you need to unstage files.
+learning-objective: ファイルを案ステージする際に何ができるかを学びます。
 screens:
   - video-slide:
-      title: Unstaging Files
+      title: ファイルをアンステージする
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Type `echo \"This is my file to unstage.\" > unstageme.md`"
-          say: "Let's set up another scenario. First we will create a file called unstageme.md."
+          say: "別のシナリオを設定してみましょう。まずunstageme.mdというファイルを作ってください。"
         - do: "Type `git add unstageme.md`"
-          say: "Then we will stage it for the next commit. Occassionally we run into a scenario where we are trying to craft our commits and accidentally end up with a file in the staging area that we do not want to include in the next commit. "
+          say: "次のコミットの準備としてステージングします。ところが、コミットを作っている途中で次のコミットに含めたくないファイルがステージングエリアに上がってしまっているケースがときおりあります。"
         - do: "Type `git reset HEAD unstageme.md`"
-          say: "In this case, git is helpful and tells us how to remove the file from the staging area. We simply type git reset HEAD and then the file name."
+          say: "そういう場合にも、Gitは便利です。ステージングエリアからどうやってファイルを外せばいいか教えてくれます。書いてあるとおりにシンプルにgit reset HEADと打ち、ファイル名を入力すればよいのです。"
         - do: "Type `git status`"
-          say: "This unstages the file and moves it back to our working directory. From there, we can make additional changes to the file or simply add it to the next commit."
+          say: "これによってファイルをアンステージし、ワーキングディレクトリに戻すことができます。このファイルにさらに変更を追加して次のコミットのためにステージングし直すこともできます。"
       production-notes:
   - lab:
-      title: Unstaging files
+      title: ファイルをアンステージする
       id: CONT-CLI-18-lab-01
       presenter-script:
         - Now it is your turn to practice unstaging a file.

@@ -1,38 +1,38 @@
 ---
 layout: module
 leadingpath: ../
-title: Reverting Commits
+title: コミットの巻き戻し(Revert)
 pre-requisites: CONT-CLI-15_Renaming-moving-files
-learning-objective: Describe the process for reversing a commit.
+learning-objective: コミットの巻き戻しについて学びましょう。
 screens:
   - lab:
-      title: Making Commits
+      title: コミットの巻き戻し
       id: CONT-CLI-16-lab-01
       presenter-script:
-        - Next we will learn how to undo a commit. Complete these steps to prepare your files for this exercise.
+        - 次にコミットの巻き戻しの仕方について学びます。次の手順を実行して、準備をしてください。
       steps:
-        - description: Open your `goodname.md` file and add some text.
+        - description: goodname.mdファイルを開いてテキストを追加してください。
           id: CONT-CLI-16-01-edit-01
-        - description: When you are finished, commit your file changes.
+        - description: 終わったらコミットしてください。
           id: CONT-CLI-16-01-commit-01
-        - description: Re-open your `goodname.md` file and make changes to the original text.
+        - description: goodname.mdを開き直して、さらにファイルを変更してください。
           id: CONT-CLI-16-01-edit-02
-        - description: When you are finished, commit your file changes.
+        - description: 終わったらコミットしてください。
           id: CONT-CLI-16-01-commit-02
   - video-slide:
-      title: Reverting Commits
+      title: コミットの巻き戻し
       video: https://www.youtube.com/watch?v=r5C6yXNaSGo
       video-script:
         - do: "Type `git log --stat`"
-          say: "Let's take a look at the history you just created. You should have at least two commits to the same file."
-        - do: "Copy the first 4 characters of the most recent commit ID"
-          say: "Let's say that you made a mistake and need to undo all of the changes from the last commit. First you will need to find the commit and copy the first few characters of the SHA-1. You generally only need a few characters."
+          say: "今作った履歴について見てみましょう。少なくとも2つのコミットが同一ファイルに対して行われているはずです。"
+        - do: "直近のコミットIDの頭4文字をコピーします"
+          say: "たとえば変更内容を間違ってしまったことに気づいたとして、最後のコミットを巻き戻したいとします。まず該当のコミットを探しだして、そのコミットのSHA-1の最初の数文字をコピーする必要があります。基本的には数文字でよいです。（一般的には7文字程度あればユニークになると言われています）"
         - do: "Type `git revert <commit ID>`"
-          say: "Now you will type git revert and paste in the SHA-1 you copied. Git will create a new commit that is the exact opposite of the commit you are reverting."
+          say: "git revertと打った後、先ほどコピーしたSHA-1文字列をペーストしてください。Gitは与えられたSHA-1のコミットと完全に正反対のコミットを新しく作ります。"
         - do: "Edit the commit message"
-          say: "Your default text editor will open so you can edit the commit message."
+          say: "テキストエディタが開きますので、コミットメッセージを入れてください。"
         - do: "Click `Save > Close`"
-          say: "Simply save it and close the text editor to complete the process."
+          say: "保存して、テキストエディタを閉じてください。"
       production-notes:
   - lab:
       title: Reverting Your Commit
