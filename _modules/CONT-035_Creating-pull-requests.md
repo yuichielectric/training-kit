@@ -1,15 +1,15 @@
 ---
 layout: module
 leadingpath: ../
-title: Creating Pull Requests
+title: Pull Requestを作ってみよう
 pre-requisites: CONT-03_Creating-files-platform
 learning-objective: Creating a pull request.
 screens:
   - image-slide:
-      title: Understanding Pull Requests
+      title: Pull Requestについて理解しよう
       image: pull-request-icon.jpg
       presenter-script:
-        - Pull Requests are used to propose changes to the project files. A pull request introduces an action that addresses an Issue. A Pull Request is considered a "work in progress" until it is merged into the project. Now that you have created a file, you will open a pull request to discuss the file with your team mates.
+        - Pull Requestはプロジェクトのファイルを変更するために使います。Pull RequestによってIssuesに登録された問題やタスクを解決しましょう。Pull Requestはマージされるまでは「作業中（work in prograss）」であると考えましょう。ここまでで新しいファイルを作成し終えたので、チームメイトとそのファイルについて議論するためにPull Requestを作りましょう。
   - video-slide:
       title: Creating a Pull Request on GitHub
       video: http://youtu.be/kJr-PIfLDl4

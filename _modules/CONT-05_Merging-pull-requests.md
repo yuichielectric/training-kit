@@ -1,17 +1,17 @@
 ---
 layout: module
 leadingpath: ../
-title: Merging Pull Requests
+title: Pull Requestをマージしよう
 pre-requisites: CONT-04_Editing-pull-request-files
 learning-objective: Merge the changes made on your feature branch into your master branch.
 screens:
   - image-slide:
-      title: Merging Pull Requests
+      title: Pull Requestをマージしよう
       image: merge-logo.jpg
       presenter-script:
-        - At this point, your pull request should be approved and you are ready to merge it in to the `master` branch.
-        - When you merge your branch, you are taking the content and history from your feature branch and adding it to the content and history of the `master` branch.
-        - Many project teams have established rules about who should merge a pull request. Some say it should be the person who created the pull request since they will be the ones to deal with any issues resulting from the merge. Others say it should be a single person within the project team to ensure consistency. Still others say it can be anyone other than the person who created the pull request.
+        - ここまでで、Pull Requestはレビューされて `master` ブランチにマージする準備ができているはずです。
+        - ブランチをマージすることで、フィーチャーブランチ上のコンテンツや履歴を `master` ブランチに加えることになります。
+        - 多くのチームでPull Requestを誰がマージするかルールを決めています。Pull Requestを作った人がマージするべきだとしているチームもあります。その理由は、Pull Requestを作った人はマージすることによってなにか問題が起きた際に対処するべきだからというものです。他にも、一貫性を保つために常に同じ人がマージするべきとしているチームもあります。Pull Requestを作った人以外であれば誰でも良いとしているチームもあります。
         - There are also third party Continuous Integration (CI) tools you can integrate with GitHub to test the build before the merge is completed. There are pros and cons to each approach and we will not attempt to prescribe a solution here, but these are good conversations to have within your project team.
         - Let's take a look at how you can merge the pull request and close the original issue at the same time.
   - video-slide:

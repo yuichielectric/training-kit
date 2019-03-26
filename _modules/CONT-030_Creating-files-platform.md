@@ -1,7 +1,7 @@
 ---
 layout: module
 leadingpath: ../
-title: Creating Files on GitHub
+title: GitHub上で新しいファイルを作ってみよう
 pre-requisites: CONT-02_Using-branches
 learning-objective: Add a new file using GitHub.com or GitHub Enterprise.
 screens:
@@ -35,7 +35,7 @@ screens:
           say: We are ready to commit our file. On the next page you will complete the steps to add a file of your own.
       production-notes:
   - lab:
-      title: Creating a New File
+      title: 新しいファイルを作ってみよう
       id: CONT-030-lab-01
       presenter-script:
         - Let's respond to the issue you created earlier by creating a file on your branch.

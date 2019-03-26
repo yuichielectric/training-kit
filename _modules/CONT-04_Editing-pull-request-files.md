@@ -1,15 +1,15 @@
 ---
 layout: module
 leadingpath: ../
-title: Editing Pull Request Files
+title: Pull Requestのファイルを修正しよう
 pre-requisites: CONT-035_Creating-pull-requests
 learning-objective: Edit a file that is currently part of a pull request.
 screens:
   - image-slide:
-      title: Editing Pull Request Files
+      title: Pull Requestのファイルを修正しよう
       image: discussion-logo.jpg
       presenter-script:
-        - Since you created the pull request, you will be notified when someone adds a comment. In this case, the comment tells us we need to make a change to the file we have already created. Let's see how GitHub makes this easy.
+        - Pull Requestを作ると、誰かがそこにコメントを書くとあなたに通知が飛びます。今回のケースでは、作成したファイルに何かしらの変更が必要であるというコメントが通知されます。GitHubを使うとどのくらい簡単にこういったコミュニケーションができるのか見てみましょう。
   - video-slide:
       title: Editing Pull Request Files
       video: http://youtu.be/F0IvcyTwDt4
