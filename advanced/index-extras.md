@@ -70,7 +70,6 @@ These are called Branching Strategies, but are just as easily called *Team Colla
 
 
 
-{% capture slide %}
 ### Mastering Shortcuts
 
 
