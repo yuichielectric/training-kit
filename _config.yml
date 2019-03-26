@@ -1,3 +1,4 @@
+
 # For Atom Feed
 domain: training.github.com
 author: GitHub Training Team
@@ -8,7 +9,7 @@ title: GitHub Training
 
 baseurl: /training-kit
 permalink: /articles/:title
-highlighter: pygments
+highlighter: rouge
 exclude:
 - bin
 - config.rb
