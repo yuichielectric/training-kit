@@ -32,7 +32,7 @@ include:
 - _stylesheets
 - _javascript
 
-markdown: rdiscount
+markdown: kramdown
 
 sass:
   sass_dir: assets/vendor/
