@@ -69,8 +69,9 @@ These are called Branching Strategies, but are just as easily called *Team Colla
 #### Summary
 
 
-
+{% capture slide %}
 ### Mastering Shortcuts
+{% endcapture %}
 
 
 {% capture slide %}
