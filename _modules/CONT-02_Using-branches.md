@@ -31,12 +31,12 @@ screens:
         - do: Click the branch dropdown and reselect the branch
           say: "If you want to continue working on your branch, you will need to reselect it using the branch dropdown. Now you are ready to create your own branch and start adding some commits."
   - lab:
-      title: Creating a Branch
+      title: ブランチを作ってみよう
       id: CONT-02-lab-01
       presenter-script:
-        - Let's practice creating a branch.
+        - ブランチを作る練習をしましょう。
       steps:
-        - description: "Create a branch in the repo named firstname-lastname (using your first and last names)."
+        - description: "「(あなたのGitHubのアカウント名)-bio」という名前のブランチを作ってみましょう。"
           id: CONT-02-create-branch
           verifications:
             - verification-type: branch-created
