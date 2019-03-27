@@ -38,9 +38,9 @@ screens:
       title: 新しいファイルを作ってみよう
       id: CONT-030-lab-01
       presenter-script:
-        - Let's respond to the issue you created earlier by creating a file on your branch.
+        - ブランチ上に新しいファイルを作ってみましょう。
       steps:
-        - description: "Add a new bio file to the docs folder. Name the file firstname-lastname.md."
+        - description: "新しく「(あなたのGitHubアカウント名)-bio.md」という名前の自己紹介ファイルを作ってみましょう。"
           id: CONT-030-create-file
           verifications:
             - verification-type: file-created
