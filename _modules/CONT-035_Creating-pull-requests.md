@@ -42,19 +42,19 @@ screens:
           say: "Most project teams require someone to sign off on the change before it is merged. We like to use emoji to show our approval. In the previous lab you created a file, next you will create a pull request for your file."
       production-notes:
   - lab:
-      title: Creating a Pull Request
+      title: Pull Requestを作ってみよう
       id: CONT-035-lab-01
       presenter-script:
-        - Now that you have added a new file, let's create a pull request.
+        - さて、新しいファイルの作成が出来たので、Pull Requstを作ってみましょう。
       steps:
-        - description: "Create a Pull Request, @mentioning the instructor. Assign the Pull Request to yourself."
+        - description: "Pull Requestを作成し、隣の方を@メンションしましょう。そして、自分自身をassignしましょう。"
           id: CONT-035-create-pull-request
           verifications:
             - verification-type: pull-request
               id: CONT-035-create-pull-request-verification
               success-message: "Great job - you created a Pull Request"
               failure-message: "It looks like you haven't created a Pull Request. Want to try again?"
-        - description: "Add a line comment to someone else's pull request in the class repository."
+        - description: "自分がメンションされたPull Requestでなにかレビューコメントを書いてみましょう。"
           id: CONT-035-comment
           verifications:
             - verification-type: pull-request-review-comment
