@@ -32,12 +32,12 @@ screens:
           say: "If you want to see what was changed in a specific commit, you can go to the Commits tab and click on the Commit ID. Go ahead and check your own pull request now to see if you need to make any changes."
       production-notes:
   - lab:
-      title: Editing Pull Request Files
+      title: Pull Requestを修正しよう。
       id: CONT-04-lab-01
       presenter-script:
-        - Let's make the changes requested by our teammates.
+        - レビューコメントでもらった内容を反映しよう。
       steps:
-        - description: "Go back to your pull request and make the requested changes. Commit the changes on the file directly to the feature branch and @mention the person who made the request."
+        - description: "あなたが作成したPull Requestに戻り、変更を行いましょう。その変更をフィーチャーブランチにコミットし、再度レビューしてくれた方に@メンションをしましょう。"
           id: CONT-04-edit-file
           verifications:
             - verification-type: file-modified
